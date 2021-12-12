@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<style>
+
+    ::placeholder {
+        color: #f9e29c;
+    }
+
+    body {
+        background-color: #84a59d;
+        color: #f9e29c;
+    }
+
+    h3 {
+        color: #f9e29c
+    }
+
+    button {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+    }
+
+    .form-control {
+        border-color: #f9e29c;
+        background-color: #84a59d;
+        color: #f9e29c
+    }
+
+    .btn-custom {
+        border-color: #f9e29c;
+        color: #f9e29c
+    }
+
+    
+
+    
+
+</style>
+<form method="POST">
+    <br/>
+    <h3 align="center">Login</h3>
+    <div class="form-group">
+        <label for="email" >Email</label>
+        <input
+            type = "email"
+            class = "form-control"
+            id="email"
+            name="email"
+            placeholder="" />
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input 
+            type="password"
+            class= "form-control"
+            id = "password"
+            name = "password"
+            placeholder = "" />
+    </div>
+    <br/>
+    <button type = "submit" class = "btn btn-custom">Login</button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}predict{% endblock %}
+{% block content %}
+<style>
+    body {
+        background-color:  #84a59d;
+        color: #ffffff;
+        text-align: center;
+    }
+    button {
+        font-size: 16px;
+        color: white;
+    }
+</style>
+</br>
+<h1>hello {{ name.lower() }},</h1>
+<h3>find the books you need with a few short clicks.</h3>
+</br>
+<form method = "POST">
+<button type = "submit" class="btn btn-outline-light">predict.</button>
+</form>
+{% endblock %}
+

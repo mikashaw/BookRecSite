@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}predict{% endblock %}
+{% block content %}
+<style>
+    body {
+        background-color: #84a59d;
+        
+        text-align: center;
+    }
+    h1 {
+        color: white;
+    }
+</style>
+</br>
+<h1>here are your recommendations:</h1>
+</br>
+<div class = "container">
+    <div class="card-deck">
+        {%for i in web_book_data.keys()%}
+        <div class="card">
+          <img src= {{f"{i["img_url"]}"}} class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{i["title"]}}</h5>
+            <p class="card-text">{{i["author"]}}</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        {%endfor%}
+</div>
+{% endblock %}

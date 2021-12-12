@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}Sign Up{% endblock%}
+{% block content %}
+<style>
+    body {
+        background-color: #f9e29ce2;
+        color: #84a59d;
+    }
+    .btn-custom {
+    
+        color: #84a59d;
+        border-color:#84a59d
+    }
+    .form-control {
+        background-color: #f9e29ce2;
+        border-color: #84a59d;
+    }
+</style>
+<form method="POST">
+    <br/>
+    <h3 align="center" class = "font-weight-light">Sign Up</h3>
+    <div class = "form-group">
+        <label for="email" class = "font-weight-light">Email</label>
+        <input  
+            type = "email"
+            class = "form-control"
+            id = "email"
+            name = "email"
+            placeholder = "" />
+        <br/>
+        <label for="firstName" class = "font-weight-light">First Name</label>
+        <input 
+            type = "text"
+            class = "form-control"
+            id = "firstName"
+            name = "firstName"
+            placeholder = "" />
+        <br/>
+        <label for=password1 class = "font-weight-light">Password</label>
+        <input 
+            type = "password"
+            class = "form-control"
+            id = "password1"
+            name = "password1"
+            placeholder = "" />
+        <br/>
+        <label for="password2" class= "font-weight-light">Password (Confirm)</label>
+        <input 
+            type = "password"
+            class = "form-control"
+            id = "password2"
+            name = "password2"
+            placeholder = "" />
+        <br/>
+        <button type = "submit" class="btn btn-custom">Submit</button>
+
+    </div>
+    
+</form>
+{% endblock %}
